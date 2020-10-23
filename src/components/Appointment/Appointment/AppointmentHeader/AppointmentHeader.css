@@ -1,0 +1,16 @@
+.react-calendar{
+    width: 90%;
+    margin-top: 10%;
+    border: 1px solid transparent;
+    box-shadow: 2px 3px 15px 5px rgb(227, 227, 235);
+    color:gray;
+}
+
+/* .react-calendar button{
+
+} */
+/* button : hover{
+    color: ;
+} */
+
+

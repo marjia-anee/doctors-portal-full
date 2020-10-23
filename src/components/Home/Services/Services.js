@@ -28,13 +28,13 @@ const Services = () => {
             <h2>Services we provide </h2>
            </div>
 
-           <div className="d-flex justify-content-center">
+           <div className="d-flex justify-content-center container">
             <div className = "w-75 row mt-5 pt-5">
-            {
-                serviceData.map(service => <ServiceDetail service={service}></ServiceDetail>)
-            }
+                {
+                    serviceData.map(service => <ServiceDetail service={service}></ServiceDetail>)
+                }
             </div>
-        </div>
+            </div>
        </section>
        
     );
