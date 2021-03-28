@@ -4,10 +4,14 @@ import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import {UserContext} from '../../../App';
 import LoginBg from '../../../images/loginBg.png';
+import { useHistory, useLocation } from 'react-router';
 
 
 const Login = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const history = useHistory();
+    const location = useLocation();
+    const { from } = location.state || { from: { pathname: "/" } };
    
    
     if(firebase.apps.length === 0) {

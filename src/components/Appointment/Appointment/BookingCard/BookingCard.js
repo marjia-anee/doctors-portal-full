@@ -19,7 +19,7 @@ const BookingCard = ({booking, date}) => {
                     <h5 style = {{color: '#1CC7C1'}} className = "card-title">{booking.subject}</h5>
                     <h6>{booking.visitingHour}</h6>
                     <p>{booking.totalSpace} SPACES AVAILABLE</p>
-                    <button style={{color: '#1CC7C1'}} onClick={openModal}>Book Appointment</button>
+                    <button className="btn btn-primary" onClick={openModal}>Book Appointment</button>
                     <AppointmentForm modalIsOpen={modalIsOpen} appointmentOn={booking.subject} closeModal={closeModal} date={date}></AppointmentForm>
                 </div>
 

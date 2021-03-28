@@ -37,7 +37,7 @@ const onSubmit = data => {
     .then(success => {
         if(success){
             closeModal();
-            alert('appointment created successfully')
+            alert('Appointment created successfully')
         }
     })
 
@@ -55,7 +55,7 @@ const onSubmit = data => {
         >
 
           <h2 className = "text-center" style = {{color: '#1CC7C1'}}>{appointmentOn}</h2>
-    <p className = "text-center"style = {{color: '#1CC7C1'}}>On {date.toDateString()}</p>
+    <p className = "text-center text-secondary"style = {{color: '#1CC7C1'}}>On {date.toDateString()}</p>
           <form className="p-5" onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group">
                         <input type="text" ref={register({ required: true })} name="name" placeholder="Your Name" className="form-control" />
@@ -95,7 +95,7 @@ const onSubmit = data => {
                     </div>
 
                     <div className="form-group text-right">
-                        <button type="submit"style = {{color: '#1CC7C1'}}>Send</button>
+                        <button className="btn btn-primary" type="submit">Send</button>
                     </div>
                 </form>
         </Modal>

@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import AppointmentDataTable from '../../Dashboard/AppointmentDataTable/AppointmentDataTable';
 import Sidebar from '../../Dashboard/Sidebar/Sidebar';
 
 const AllPatients = () => {
     const [appointments, setAppointments] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/appointments')
+            .then(res => res.json())
+            .then(data => setAppointments(data))
+    }, [])
 
     return (
         <div className="container-fluid row" >
